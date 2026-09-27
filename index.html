@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive login and sign-up interface built with HTML, CSS, and JavaScript.">
+  <title>Suha — Sign in</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="layout">
+    <aside class="showcase" aria-label="Welcome">
+      <a class="brand" href="#" aria-label="Suha home"><span class="brand-mark">✦</span> suha<span class="brand-dot">.</span></a>
+      <div class="showcase-content">
+        <div class="eyebrow"><span class="eyebrow-line"></span> A BETTER WAY TO BEGIN</div>
+        <h1>Good things<br>start <em>here.</em></h1>
+        <p>One calm place for all your big ideas. Sign in and pick up right where you left off.</p>
+        <div class="quote"><span class="quote-mark">“</span><p>Make space for what matters. The rest will follow.</p><span class="quote-author">THE SUHA WAY</span></div>
+      </div>
+      <div class="showcase-footer"><span>✦ &nbsp; Made for the curious</span><span>© 2026 Suha</span></div>
+      <div class="orb orb-one"></div><div class="orb orb-two"></div>
+    </aside>
+
+    <section class="form-side" aria-label="Account forms">
+      <div class="mobile-brand">✦ suha<span>.</span></div>
+      <div class="form-card">
+        <div class="tabs" role="tablist" aria-label="Account action">
+          <button class="tab active" id="login-tab" role="tab" aria-selected="true" aria-controls="login-panel" type="button">Log in</button>
+          <button class="tab" id="signup-tab" role="tab" aria-selected="false" aria-controls="signup-panel" type="button">Sign up</button>
+        </div>
+
+        <div id="login-panel" role="tabpanel" aria-labelledby="login-tab">
+          <div class="intro"><span class="hello">WELCOME BACK <span aria-hidden="true">✳</span></span><h2>Nice to see you again.</h2><p>Enter your details to access your account.</p></div>
+          <form id="login-form" novalidate>
+            <div class="field"><label for="login-email">Email address</label><input id="login-email" type="email" placeholder="you@example.com" autocomplete="email" required><small class="error" id="login-email-error"></small></div>
+            <div class="field"><div class="label-row"><label for="login-password">Password</label><button class="text-link" type="button" id="forgot-button">Forgot password?</button></div><div class="password-wrap"><input id="login-password" type="password" placeholder="Enter your password" autocomplete="current-password" required><button class="reveal" type="button" data-target="login-password" aria-label="Show password" aria-pressed="false">Show</button></div><small class="error" id="login-password-error"></small></div>
+            <label class="check-row"><input type="checkbox" id="remember"><span>Remember me on this device</span></label>
+            <button class="primary" type="submit">Log in <span aria-hidden="true">↗</span></button>
+          </form>
+          <p class="switch-note">New around here? <button class="text-link switch" type="button" data-tab="signup">Create an account</button></p>
+        </div>
+
+        <div id="signup-panel" role="tabpanel" aria-labelledby="signup-tab" hidden>
+          <div class="intro"><span class="hello">LET'S GET STARTED <span aria-hidden="true">✳</span></span><h2>Make yourself at home.</h2><p>Create your account in a few quick steps.</p></div>
+          <form id="signup-form" novalidate>
+            <div class="field"><label for="signup-name">Full name</label><input id="signup-name" type="text" placeholder="Your full name" autocomplete="name" required><small class="error" id="signup-name-error"></small></div>
+            <div class="field"><label for="signup-email">Email address</label><input id="signup-email" type="email" placeholder="you@example.com" autocomplete="email" required><small class="error" id="signup-email-error"></small></div>
+            <div class="field"><label for="signup-password">Password</label><div class="password-wrap"><input id="signup-password" type="password" placeholder="At least 8 characters" autocomplete="new-password" required><button class="reveal" type="button" data-target="signup-password" aria-label="Show password" aria-pressed="false">Show</button></div><small class="error" id="signup-password-error"></small></div>
+            <label class="check-row"><input type="checkbox" id="terms" required><span>I agree to the demo terms</span></label><small class="error" id="terms-error"></small>
+            <button class="primary" type="submit">Create account <span aria-hidden="true">↗</span></button>
+          </form>
+          <p class="switch-note">Already have an account? <button class="text-link switch" type="button" data-tab="login">Log in</button></p>
+        </div>
+        <div class="notice" id="notice" role="status" aria-live="polite" hidden></div>
+        <p class="demo-note">UI demo only — no accounts are created and no passwords are sent or stored.</p>
+      </div>
+      <div class="bottom-note">Thoughtful by design. Simple by nature. <span>✦</span></div>
+    </section>
+  </main>
+</body>
+</html>
